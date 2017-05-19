@@ -1,0 +1,9 @@
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.DBUtility\bin\Debug\ProjectDemo.DBUtility.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.DBUtility\bin\Debug\ProjectDemo.DBUtility.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.DBUtility\obj\Debug\ProjectDemo.DBUtility.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.DBUtility\obj\Debug\ProjectDemo.DBUtility.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.DBUtility\bin\Debug\ProjectDemo.DBUtility.dll
+E:\DoNet\ProjectDemo\ProjectDemo.DBUtility\bin\Debug\ProjectDemo.DBUtility.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.DBUtility\obj\Debug\ProjectDemo.DBUtility.csprojResolveAssemblyReference.cache
+E:\DoNet\ProjectDemo\ProjectDemo.DBUtility\obj\Debug\ProjectDemo.DBUtility.dll
+E:\DoNet\ProjectDemo\ProjectDemo.DBUtility\obj\Debug\ProjectDemo.DBUtility.pdb

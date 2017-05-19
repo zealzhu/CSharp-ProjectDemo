@@ -1,0 +1,28 @@
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.BLL.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.BLL.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Common.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DAL.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Model.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Common.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DAL.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Model.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.csprojResolveAssemblyReference.cache
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.BLL\bin\Debug\Newtonsoft.Json.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.BLL.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.BLL.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Common.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DAL.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Model.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\Newtonsoft.Json.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Common.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DAL.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Model.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.csprojResolveAssemblyReference.cache
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.dll
+E:\DoNet\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.pdb

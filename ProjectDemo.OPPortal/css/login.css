@@ -1,0 +1,37 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Microsoft YaHei';
+    font-size: 14px;
+}
+
+#formLogin {
+    margin: 0 auto; /*整体居中*/
+    width: 300px;
+    margin-top: 200px;
+}
+
+    #formLogin table tr {
+        line-height: 40px; /*每行行高*/
+    }
+
+        #formLogin table tr #txtCaptcha, #formLogin table tr #imgCaptcha {
+            display: inline;
+        }
+
+        #formLogin table tr #chkAutoLogin {
+            margin-top: 15px;
+        }
+
+        #formLogin table tr #txtCaptcha {
+            width: 100px;
+        }
+
+        #formLogin table tr .tip {  /*提示信息*/
+            color: red;
+            display: none;
+        }
+
+    #formLogin table th {
+        text-align: right; /*文字右对齐*/
+    }

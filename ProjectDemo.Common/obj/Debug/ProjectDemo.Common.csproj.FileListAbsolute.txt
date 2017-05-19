@@ -1,0 +1,11 @@
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Common\bin\Debug\ProjectDemo.Common.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Common\bin\Debug\ProjectDemo.Common.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Common\bin\Debug\Newtonsoft.Json.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Common\bin\Debug\ProjectDemo.Common.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Common\bin\Debug\ProjectDemo.Common.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.Common\bin\Debug\Newtonsoft.Json.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.csprojResolveAssemblyReference.cache
+E:\DoNet\ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.pdb

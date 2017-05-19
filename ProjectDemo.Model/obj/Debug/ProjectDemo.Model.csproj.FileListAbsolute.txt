@@ -1,0 +1,16 @@
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Model.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Model.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.pdb
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.csprojResolveAssemblyReference.cache
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\bin\Debug\Newtonsoft.Json.dll
+C:\Users\zhu\documents\visual studio 2013\Projects\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Model.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Model.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Model\bin\Debug\Newtonsoft.Json.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.pdb
+E:\DoNet\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.csprojResolveAssemblyReference.cache
+E:\DoNet\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.dll
+E:\DoNet\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.pdb
