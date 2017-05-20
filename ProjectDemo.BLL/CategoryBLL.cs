@@ -266,6 +266,90 @@ namespace ProjectDemo.BLL
         }
         #endregion
 
+        #region 添加
+        public void AddCategory(Category model) {
+            //先添加到数据库中获取id
+            int categoryId = Add(model);
+            model.CategoryId = categoryId;
+
+            //设置Depth和IdPath
+            if (model.ParentId <= 0)
+            {
+                //顶级分类
+                model.Depth = 1;
+                model.IdPath = "," + categoryId + ",";
+            }
+            else
+            {
+                //非顶级分类
+                Category parentModel = GetModel(model.ParentId);
+
+                model.Depth = parentModel.Depth + 1;
+                model.IdPath = parentModel.IdPath + categoryId + ",";
+
+                //更新父分类的HasChildren
+                if (!Convert.ToBoolean(parentModel.HasChildren))
+                    UpdateHasChildren(parentModel.CategoryId, true);
+            }
+            //更新当前节点
+            Update(model);
+        }
+        #endregion
+
+        #region 获取单条记录
+        /// <summary>
+        /// 获取单条记录
+        /// </summary>
+        /// <param name="where"></param>
+        /// <param name="orderBy"></param>
+        /// <param name="fields"></param>
+        /// <returns></returns>
+        public Model.Category GetModel(string where, string orderBy = "", string fields = "*")
+        {
+            List<Model.Category> list = GetModelList(where, orderBy, fields);
+            return list.Count <= 0 ? null : list[0];
+        }
+        #endregion
+
+        #region 更新
+        public bool Update(Category model, string[] field, string where = "1=1")
+        {
+            return dal.Update(model, field, where) > 0;
+        }
+        public void Update(Category oldModel, Category newModel)
+        {
+            //更新ParentId与其他字段
+            string[] fields = { "Name", "Type", "ParentId", "Status", "SortIndex", "Url" };//要更新的列
+            string where = "CategoryId=" + newModel.CategoryId;
+            Update(newModel, fields, where);
+
+            //更新Depth和IdPath
+            Category parentCategory = GetModel(newModel.ParentId);          //父节点
+            int depth = newModel.ParentId == 0 ? 0 : parentCategory.Depth;  //父节点的depth
+            //父节点的IdPath
+            string parentIdPath = newModel.ParentId == 0 ? "," : parentCategory.IdPath;
+            //自己节点开始的位置
+            int start = oldModel.IdPath.IndexOf("," + oldModel.CategoryId + ",");                   
+            //替换父节点的长度，sql中索引是从1开始
+            int length = start == 0 ? 1 : start + 1;
+
+            //获取当前节点与所有子节点的CategoryId数组
+            where = string.Format("IdPath like '%,{0},%'", oldModel.CategoryId);
+            List<Category> childrenCategory = GetModelList(fields: "CategoryId", where: where);
+            int[] arrChildrenCategory = childrenCategory.Select(o => o.CategoryId).ToArray();
+
+            //Depth=父节点Depth+1+（子节点或自己Depth-原Depth)
+            string sql = string.Format(@"update Category set Depth={0}+1+Depth-{1}, IdPath=STUFF(IdPath, 1, {2}, '{3}') where CategoryId in({4})",
+                        depth, oldModel.Depth, length, parentIdPath,string.Join(",", arrChildrenCategory));
+            dal.Update(sql);
+            //更新原父节点的HasChildren
+            where = "ParentId=" + oldModel.ParentId;
+            if (this.GetRecordCount(where) <= 0)//原父节点已经没有子节点了，那么就要更新HasChildren为0
+            {
+                this.UpdateHasChildren(oldModel.ParentId, false);
+            }
+        }
+        #endregion
         #endregion  ExtensionMethod
     }
 }

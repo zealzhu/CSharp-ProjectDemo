@@ -348,6 +348,7 @@ namespace ProjectDemo.DAL
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 		#endregion  BasicMethod
+
 		#region  ExtensionMethod
 
         /// <summary>
@@ -375,6 +376,7 @@ namespace ProjectDemo.DAL
             }
             return list;
         }
+
         /// <summary>
         /// 将SqlDataReader转换为Model
         /// </summary>
@@ -441,7 +443,7 @@ namespace ProjectDemo.DAL
             sb.Append("delete from Category ");
             if(!string.IsNullOrWhiteSpace(where))
             {
-                sb.Append("where" + where);
+                sb.Append("where " + where);
             }
             return DbHelperSQL.ExecuteSql(sb.ToString());            
         }
@@ -491,6 +493,60 @@ namespace ProjectDemo.DAL
                 }
             }
             return list;
+        }
+
+        /// <summary>
+        /// 更新
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="fields"></param>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        public int Update(Model.Category model, string[] fields, string where)
+        {
+            if(fields == null || fields.Length <= 0)
+            {
+                return 0;
+            }
+            SqlParameter[] ps = new SqlParameter[fields.Length];
+            StringBuilder sb = new StringBuilder();
+            sb.Append("update Category set ");
+            for (int i = 0; i < fields.Length; i++)
+            {
+                //拼接参数
+                sb.AppendFormat("{0}=@{0}{1}",
+                    fields[i], fields.Length - 1 != i ? "," : "");
+                //生成SqlParameter对象
+                ps[i] = CreateSqlParameter(model, fields[i]);
+            }
+            if (!string.IsNullOrWhiteSpace(where))
+                sb.Append(" where " + where);
+            return DbHelperSQL.ExecuteSql(sb.ToString(), ps);
+        }
+
+        public int Update(string sql)
+        {
+            return DbHelperSQL.ExecuteSql(sql);
+        }
+
+        /// <summary>
+        /// 通过反射获取指定属性的值
+        /// </summary>
+        /// <param name="model"></param>
+        /// <param name="field"></param>
+        /// <returns></returns>
+        private SqlParameter CreateSqlParameter(Model.Category model, string field)
+        {
+            //获得属性对象
+            Type type = model.GetType();
+            System.Reflection.PropertyInfo pi = type.GetProperty(field);
+            if(pi == null)
+            {
+                throw new Exception("没有找到指定的属性" + field);
+            }
+            //获取值
+            object value = pi.GetValue(model, null);
+            return new SqlParameter("@" + field, value);
         }
 		#endregion  ExtensionMethod
 	}

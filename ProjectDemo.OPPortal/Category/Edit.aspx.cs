@@ -29,11 +29,31 @@ namespace ProjectDemo.OPPortal.Category
             {
                 //修改
                 BindParentIdDropDownList(Convert.ToInt32(categoryId));
+                BindOldData(Convert.ToInt32(categoryId));
             }
+        }
+
+        /// <summary>
+        /// 修改时绑定旧数据到页面上
+        /// </summary>
+        /// <param name="categoryId"></param>
+        private void BindOldData(int categoryId)
+        {
+            Category model = bll.GetModel(categoryId);
+            txtCategoryName.Text = model.Name;
+            rdblType.SelectedValue = model.Type.ToString();
+            ddlParentId.SelectedValue = model.ParentId.ToString();
+            rdblStatus.SelectedValue = model.Status.ToString();
+            txtSortIndex.Text = model.SortIndex.ToString();
+            txtUrl.Text = model.Url;
+
+            //保存旧数据
+            ViewState["OldModel"] = model;
         }
 
         //绑定父级列表的集合
         List<Category> bindParentIdList = new List<Category>();
+
         /// <summary>
         /// 绑定父级分类下拉框
         /// </summary>
@@ -63,16 +83,22 @@ namespace ProjectDemo.OPPortal.Category
                     Name = topCategory[i].Name
                 });
                 //递归添加子节点
-                AddChildren(list, topCategory[i]);
-
-                //绑定数据
-                ddlParentId.DataSource = bindParentIdList;
-                ddlParentId.DataTextField = "Name";
-                ddlParentId.DataBind();
-                
-                ddlParentId.Items.Insert(0, "顶级分类");
+                AddChildren(list, topCategory[i]);                
             }
+            //绑定数据
+            ddlParentId.DataSource = bindParentIdList;
+            ddlParentId.DataTextField = "Name";
+            ddlParentId.DataValueField = "CategoryId";
+            ddlParentId.DataBind();
+
+            ddlParentId.Items.Insert(0, new ListItem("顶级分类", "0"));
         }
+
+        /// <summary>
+        /// 递归添加子节点
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="root"></param>
         private void AddChildren(List<Category> list, Category root)
         {
             if(!Convert.ToBoolean(root.HasChildren))
@@ -102,7 +128,34 @@ namespace ProjectDemo.OPPortal.Category
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            Category model = new Category();
+            //设置界面上的数据
+            model.Name = txtCategoryName.Text;
+            model.Type = Convert.ToInt32(rdblType.SelectedValue);
+            model.ParentId = Convert.ToInt32(ddlParentId.SelectedValue);
+            model.Status = Convert.ToInt32(rdblStatus.SelectedValue);
+            model.SortIndex = Convert.ToInt32(txtSortIndex.Text);
+            model.Url = txtUrl.Text;
 
+            if (ViewState["OldModel"] != null)
+            {
+                //修改
+                Category oldModel = (Category)ViewState["OldModel"];
+                model.CategoryId = oldModel.CategoryId;//主键
+                bll.Update(oldModel, model);
+                ScriptHelper.AlertRedirect("修改成功", "/Category/List.aspx");
+            }
+            else
+            {
+                //新增
+                model.Content = string.Empty;//先留空
+                model.IdPath = string.Empty;//先留空，待更新
+                model.Depth = 1;//先设置为1，待更新
+                model.HasChildren = 0;
+
+                bll.AddCategory(model);
+                ScriptHelper.AlertRedirect("添加成功", "/Category/List.aspx");
+            }
         }
     }
 }
