@@ -12,7 +12,7 @@
                 <asp:Image ID="imgAbout" runat="server" Width="220" Height="100"/>
                 <br />
                 <span>图片尺寸：220*100，大小不超过0.5MB，格式：jpg、gif、png、bmp</span>
-                <asp:Button ID="btnUpload" OnClick="btnUpload_Click" runat="server" Text="上传" OnClientClick="return checkImage();"/>
+                <asp:Button ID="btnUpload" OnClick="btnUpload_Click" runat="server" Text="上传" OnClientClick="return checkImage(document.getElemnetById('fuAboutImgUrl', 0.5);"/>
                 <asp:TextBox ID="txtAboutImgUrl" runat="server" ValidationGroup="vgUpload" CssClass="hidden"></asp:TextBox>           
             </td>
         </tr>
@@ -31,16 +31,15 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="foot" runat="server">
     <script type="text/javascript">
         //验证图片格式
-        function checkImage() {
-            //验证大小
-            
-            var img = $('#fuAboutImgUrl').get(0).files[0];  //获取图片文件
+        function checkImage(ele, size) {
+            //验证大小          
+            var img = ele.files[0];  //获取图片文件
             if (typeof (img) == "undefined") {
                 alert("还没有选择文件");
                 return false;
             }
-            var size = img.size;
-            if (size > 1024 * 1024 * 0.5) {
+            var imgSize = img.size;
+            if (imgSize > 1024 * 1024 * size) {
                 alert("文件超过限制大小");
                 return false;
             }
