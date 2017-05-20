@@ -167,7 +167,7 @@ namespace ProjectDemo.DAL
 		/// </summary>
 		public bool DeleteList(string CategoryIdlist )
 		{
-			StringBuilder strSql=new StringBuilder();
+            StringBuilder strSql = new StringBuilder();
 			strSql.Append("delete from Category ");
 			strSql.Append(" where CategoryId in ("+CategoryIdlist + ")  ");
 			int rows=DbHelperSQL.ExecuteSql(strSql.ToString());
@@ -428,6 +428,69 @@ namespace ProjectDemo.DAL
                 model.HasChildren = Convert.ToInt32(reader["HasChildren"]);
             }
             return model;
+        }
+
+        /// <summary>
+        /// 根据where条件删除
+        /// </summary>
+        /// <param name="where"></param>
+        /// <returns></returns>
+        public int Delete(string where)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("delete from Category ");
+            if(!string.IsNullOrWhiteSpace(where))
+            {
+                sb.Append("where" + where);
+            }
+            return DbHelperSQL.ExecuteSql(sb.ToString());            
+        }
+
+        /// <summary>
+        /// 更新是否有子节点
+        /// </summary>
+        /// <param name="categoryId"></param>
+        /// <param name="hasChildren"></param>
+        /// <returns></returns>
+        public int UpdateHasChildren(int categoryId, bool hasChildren)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("update Category ");
+            sb.Append("set HasChildren=" + Convert.ToInt32(hasChildren));//true 1
+            sb.Append(" where CategoryId=" + categoryId);
+            return DbHelperSQL.ExecuteSql(sb.ToString());
+        }
+
+        /// <summary>
+        /// 根据指定字段，条件获取Model List
+        /// </summary>
+        /// <param name="fields"></param>
+        /// <param name="where"></param>
+        /// <param name="orderBy"></param>
+        /// <returns></returns>
+        public List<Model.Category> GetModelList(string fields, string where, string orderBy)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select " + fields);
+            sb.Append(" from Category ");
+            sb.Append("where " + where);
+            if(!string.IsNullOrWhiteSpace(orderBy))
+            {
+                sb.Append(" order by " + orderBy);
+            }
+            List<Model.Category> list = new List<Model.Category>();
+            using(SqlDataReader reader = DbHelperSQL.ExecuteReader(sb.ToString()))
+            {
+                if(reader.HasRows)
+                {
+                    while(reader.Read())
+                    {
+                        Model.Category category = DataReaderToModel(reader);
+                        list.Add(category);
+                    }
+                }
+            }
+            return list;
         }
 		#endregion  ExtensionMethod
 	}

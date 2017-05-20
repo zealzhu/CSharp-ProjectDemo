@@ -26,3 +26,17 @@ E:\DoNet\ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.pdb
 E:\DoNet\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.csprojResolveAssemblyReference.cache
 E:\DoNet\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.dll
 E:\DoNet\ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.BLL.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.BLL.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Common.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DAL.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Model.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\Newtonsoft.Json.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Common.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DAL.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.Model.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\bin\Debug\ProjectDemo.DBUtility.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.csprojResolveAssemblyReference.cache
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.BLL\obj\Debug\ProjectDemo.BLL.pdb

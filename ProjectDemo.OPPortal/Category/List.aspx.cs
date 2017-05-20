@@ -9,6 +9,8 @@ namespace ProjectDemo.OPPortal.Category
 {
     using Model;
     using BLL;
+    using ProjectDemo.Common;
+
     public partial class List : BasePage
     {
         private CategoryBLL bll = new CategoryBLL();
@@ -55,7 +57,33 @@ namespace ProjectDemo.OPPortal.Category
             {
                 //如果是内容页则显示操作内容页
                 hlContentOperate.Visible = true;
+            }         
+        }
+
+        protected void gvCategory_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            switch(e.CommandName)
+            {
+                case "del":
+                    Delete(Convert.ToInt32(e.CommandArgument));
+                    break;
             }
+        }
+
+        private void Delete(int id)
+        {
+            if (bll.Delete(bll.GetModel(id))) {
+                ScriptHelper.AlertRefresh("删除成功");
+            }
+            else
+            {
+                ScriptHelper.AlertRefresh("删除失败");
+            }
+        }
+
+        protected void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Category/Edit.aspx");
         }
     }
 }

@@ -20,6 +20,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -68,6 +69,7 @@
     <Content Include="Captcha\CaptchaHandler.ashx" />
     <Content Include="Ajax\LoginHandler.ashx" />
     <Content Include="BaseHandler.ashx" />
+    <Content Include="Category\Edit.aspx" />
     <Content Include="Category\List.aspx" />
     <Content Include="Config\Edit.aspx" />
     <Content Include="css\layout.css" />
@@ -140,6 +142,13 @@
     </Compile>
     <Compile Include="Captcha\CaptchaHandler.ashx.cs">
       <DependentUpon>CaptchaHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Category\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Category\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
     </Compile>
     <Compile Include="Category\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>

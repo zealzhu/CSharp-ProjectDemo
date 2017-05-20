@@ -22,3 +22,15 @@ E:\DoNet\ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Model.pdb
 E:\DoNet\ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.csprojResolveAssemblyReference.cache
 E:\DoNet\ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.dll
 E:\DoNet\ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.DAL.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.DAL.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Common.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.DBUtility.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Model.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\Newtonsoft.Json.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Common.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.DBUtility.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Model.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.csprojResolveAssemblyReference.cache
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.pdb

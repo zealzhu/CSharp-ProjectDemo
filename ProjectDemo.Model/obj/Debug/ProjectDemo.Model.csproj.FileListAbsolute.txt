@@ -14,3 +14,11 @@ E:\DoNet\ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.pdb
 E:\DoNet\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.csprojResolveAssemblyReference.cache
 E:\DoNet\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.dll
 E:\DoNet\ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Model.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Model.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\bin\Debug\Newtonsoft.Json.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\bin\Debug\ProjectDemo.Common.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.csprojResolveAssemblyReference.cache
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.dll
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Model\obj\Debug\ProjectDemo.Model.pdb
