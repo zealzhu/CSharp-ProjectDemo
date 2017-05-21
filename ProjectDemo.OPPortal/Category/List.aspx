@@ -41,7 +41,8 @@
             <asp:BoundField DataField="SortIndex" HeaderText="排序" />
             <asp:TemplateField HeaderText="内容操作" HeaderStyle-Width="80">
                 <ItemTemplate>
-                    <asp:HyperLink ID="hlContentOperate" runat="server" Visible="false">编辑内容</asp:HyperLink>
+                    <asp:HyperLink ID="hlContentOperate" runat="server" 
+                        Visible="false" NavigateUrl='<%#"/Category/EditContent.aspx?id=" + Eval("CategoryId") %>'>编辑内容</asp:HyperLink>
                 </ItemTemplate>
 
                 <HeaderStyle Width="80px"></HeaderStyle>

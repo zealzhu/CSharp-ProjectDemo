@@ -31,6 +31,7 @@ E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\Newtonsoft.Json.dll
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Common.pdb
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.DBUtility.pdb
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\ProjectDemo.Model.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\bin\Debug\Newtonsoft.Json.xml
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.csprojResolveAssemblyReference.cache
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.dll
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.DAL\obj\Debug\ProjectDemo.DAL.pdb

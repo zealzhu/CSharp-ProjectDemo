@@ -306,7 +306,7 @@ namespace ProjectDemo.BLL
         /// <returns></returns>
         public Model.Category GetModel(string where, string orderBy = "", string fields = "*")
         {
-            List<Model.Category> list = GetModelList(where, orderBy, fields);
+            List<Model.Category> list = GetModelList(fields, where, orderBy);
             return list.Count <= 0 ? null : list[0];
         }
         #endregion

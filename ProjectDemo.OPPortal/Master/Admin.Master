@@ -15,7 +15,17 @@
     <script src="/js/jquery-1.11.1.js" type="text/javascript"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/bootstrap/js/bootstrap.min.js"></script>
-
+    <script>
+        //自适应设置
+        function fit() {
+            var leftHeight = $('.center-left').height();
+            var rightHeight = $('.center-right').height();
+            if (rightHeight > leftHeight) {
+                $('.center').height(rightHeight);
+                $('.center-left').height(rightHeight);
+            }
+        }
+    </script>
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -75,13 +85,9 @@
     <asp:ContentPlaceHolder ID="foot" runat="server">
     </asp:ContentPlaceHolder>
     <script type="text/javascript">
-        //自适应设置
-        var leftHeight = $('.center-left').height();
-        var rightHeight = $('.center-right').height();
-        if (rightHeight > leftHeight) {
-            $('.center').height(rightHeight);
-            $('.center-left').height(rightHeight);
-        }        
+        
+        fit();
+               
     </script>
 </body>
 </html>
