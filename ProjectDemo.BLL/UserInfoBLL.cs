@@ -184,6 +184,11 @@ namespace ProjectDemo.BLL
             return dal.DataRowToModel(ds.Tables[0].Rows[0]);
         }
 
+        public List<UserInfo> GetModelList(string fields = "*", string strWhere = "1=1")
+        {
+            return dal.GetList(fields, strWhere);
+        }
+
         /// <summary>
         /// 用户名是否存在
         /// </summary>

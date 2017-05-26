@@ -13,7 +13,7 @@ namespace ProjectDemo.OPPortal.master
         protected string realName;
         protected void Page_Load(object sender, EventArgs e)
         {
-            ProjectDemo.Model.UserInfo userInfo = (ProjectDemo.Model.UserInfo)Session[Key.CURRENT_USER];
+            Model.UserInfo userInfo = (ProjectDemo.Model.UserInfo)Session[Key.CURRENT_USER];
             this.realName = userInfo.RealName;
         }
     }

@@ -3,6 +3,9 @@ using System.Data;
 using System.Text;
 using System.Data.SqlClient;
 using ProjectDemo.DBUtility;//Please add references
+using ProjectDemo.Common;
+using System.Collections.Generic;
+
 namespace ProjectDemo.DAL
 {
 	/// <summary>
@@ -318,31 +321,6 @@ namespace ProjectDemo.DAL
 			return DbHelperSQL.Query(strSql.ToString());
 		}
 
-		/*
-		/// <summary>
-		/// 分页获取数据列表
-		/// </summary>
-		public DataSet GetList(int PageSize,int PageIndex,string strWhere)
-		{
-			SqlParameter[] parameters = {
-					new SqlParameter("@tblName", SqlDbType.VarChar, 255),
-					new SqlParameter("@fldName", SqlDbType.VarChar, 255),
-					new SqlParameter("@PageSize", SqlDbType.Int),
-					new SqlParameter("@PageIndex", SqlDbType.Int),
-					new SqlParameter("@IsReCount", SqlDbType.Bit),
-					new SqlParameter("@OrderType", SqlDbType.Bit),
-					new SqlParameter("@strWhere", SqlDbType.VarChar,1000),
-					};
-			parameters[0].Value = "UserInfo";
-			parameters[1].Value = "UserId";
-			parameters[2].Value = PageSize;
-			parameters[3].Value = PageIndex;
-			parameters[4].Value = 0;
-			parameters[5].Value = 0;
-			parameters[6].Value = strWhere;	
-			return DbHelperSQL.RunProcedure("UP_GetRecordByPage",parameters,"ds");
-		}*/
-
 		#endregion  BasicMethod
 		#region  ExtensionMethod
 
@@ -418,7 +396,68 @@ namespace ProjectDemo.DAL
                 return false;
             }
         }
-		#endregion  ExtensionMethod
-	}
+
+        public List<Model.UserInfo> GetList(string fields, string strWhere)
+        {
+            List<Model.UserInfo> list = new List<Model.UserInfo>();
+            StringBuilder strSql = new StringBuilder();
+            strSql.Append("select " + fields);
+            strSql.Append(" FROM UserInfo ");
+            strSql.Append(" where " + strWhere);
+            SqlDataReader reader = DbHelperSQL.ExecuteReader(strSql.ToString());
+            if(reader.HasRows)
+            {
+                while(reader.Read())
+                {
+                    list.Add(DataReaderToModel(reader));
+                }
+            }
+            return list;
+        }
+        /// <summary>
+        /// 将DataReader转换为Model
+        /// </summary>
+        /// <param name="reader"></param>
+        /// <returns></returns>
+        public ProjectDemo.Model.UserInfo DataReaderToModel(SqlDataReader reader)
+        {
+            ProjectDemo.Model.UserInfo model = new ProjectDemo.Model.UserInfo();
+            if (reader.IsContainsColumn("UserId"))  //reader["CategoryId"]!=null  错误的
+            {
+                model.UserId = Convert.ToInt32(reader["UserId"]);
+            }
+            if (reader.IsContainsColumn("Username"))
+            {
+                model.Username = reader["Username"].ToString();
+            }
+            if (reader.IsContainsColumn("Password"))
+            {
+                model.Password = reader["Password"].ToString();
+            }
+            if (reader.IsContainsColumn("RealName"))
+            {
+                model.RealName = reader["RealName"].ToString();
+            }
+            if (reader.IsContainsColumn("Phone"))
+            {
+                model.Phone = reader["Phone"].ToString();
+            }
+            if (reader.IsContainsColumn("UserType"))
+            {
+                model.UserType = Convert.ToInt32(reader["UserType"]);
+            }
+            if (reader.IsContainsColumn("Status"))
+            {
+                model.Status = Convert.ToInt32(reader["Status"]);
+            }
+            if (reader.IsContainsColumn("CreateDate"))
+            {
+                model.CreateDate = Convert.ToDateTime(reader["Content"]);
+            }
+           
+            return model;
+        }
+        #endregion  ExtensionMethod
+    }
 }
 

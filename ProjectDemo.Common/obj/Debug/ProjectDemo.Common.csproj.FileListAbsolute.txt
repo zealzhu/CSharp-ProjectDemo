@@ -15,3 +15,4 @@ E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Common\bin\Debug\Newtonsoft.Json.dl
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Common\bin\Debug\Newtonsoft.Json.xml
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.dll
 E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.pdb
+E:\OpenSource\CSharp-ProjectDemo\ProjectDemo.Common\obj\Debug\ProjectDemo.Common.csprojResolveAssemblyReference.cache

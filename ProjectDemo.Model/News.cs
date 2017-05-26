@@ -36,10 +36,15 @@ namespace ProjectDemo.Model
 			set{ _categoryid=value;}
 			get{return _categoryid;}
 		}
-		/// <summary>
-		/// 新闻标题
-		/// </summary>
-		public string Title
+        /// <summary>
+        /// 分类名字
+        /// </summary>
+        public string CategoryName { get; set; }
+
+        /// <summary>
+        /// 新闻标题
+        /// </summary>
+        public string Title
 		{
 			set{ _title=value;}
 			get{return _title;}
@@ -76,6 +81,11 @@ namespace ProjectDemo.Model
 			set{ _createuserid=value;}
 			get{return _createuserid;}
 		}
+        /// <summary>
+        /// 创建用户名字
+        /// </summary>
+        public string CreateUserName { get; set; }
+
 		/// <summary>
 		/// 创建日期
 		/// </summary>
@@ -92,10 +102,11 @@ namespace ProjectDemo.Model
 			set{ _updateuserid=value;}
 			get{return _updateuserid;}
 		}
-		/// <summary>
-		/// 更新日期
-		/// </summary>
-		public DateTime UpdateDate
+        public string UpdateUserName { get; set; }
+        /// <summary>
+        /// 更新日期
+        /// </summary>
+        public DateTime UpdateDate
 		{
 			set{ _updatedate=value;}
 			get{return _updatedate;}

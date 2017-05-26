@@ -83,6 +83,10 @@
     <Content Include="Master\Admin.Master" />
     <Content Include="Ajax\LagoutHandler.ashx" />
     <Content Include="Ajax\SaveUserHandler.ashx" />
+    <Content Include="News\Edit.aspx" />
+    <Content Include="News\List.aspx" />
+    <Content Include="Product\Edit.aspx" />
+    <Content Include="Product\List.aspx" />
     <Content Include="ueditor\net\config.json" />
     <Content Include="ueditor\net\controller.ashx" />
     <Content Include="ueditor\net\README.md" />
@@ -477,6 +481,34 @@
     <Compile Include="Master\Admin.Master.designer.cs">
       <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
+    <Compile Include="News\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="News\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="News\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Product\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Product\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ueditor\net\App_Code\Config.cs" />
     <Compile Include="ueditor\net\App_Code\ConfigHandler.cs" />
@@ -519,8 +551,6 @@
     <Folder Include="Banner\" />
     <Folder Include="Feedback\" />
     <Folder Include="FriendliLink\" />
-    <Folder Include="News\" />
-    <Folder Include="Product\" />
     <Folder Include="ueditor\net\Bin\" />
     <Folder Include="upload\" />
   </ItemGroup>
