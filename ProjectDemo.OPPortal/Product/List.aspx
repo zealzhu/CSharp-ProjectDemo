@@ -1,4 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/Admin.Master" AutoEventWireup="true" CodeBehind="List.aspx.cs" Inherits="ProjectDemo.OPPortal.Product.List" %>
+
+<%@ Import Namespace="ProjectDemo.Common" %>
+<%@ Import Namespace="ProjectDemo.Model" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="right" runat="server">
@@ -9,64 +13,84 @@
         <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
         <Columns>
             <asp:BoundField DataField="ProductId" HeaderText="产品编号"
-                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center">
                 <HeaderStyle Width="80px"></HeaderStyle>
-                <ItemStyle HorizontalAlign="Center"></ItemStyle>
-            </asp:BoundField>
-            <asp:BoundField DataField="CategoryId" HeaderText="产品分类"  HeaderStyle-HorizontalAlign="Center">
-                <HeaderStyle Width="80px" />
-                <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="Name" HeaderText="产品名称"  HeaderStyle-HorizontalAlign="Center">
-                <HeaderStyle Width="80px" />
-                <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="ThumbUrl" HeaderText="ThumbUrl"  HeaderStyle-HorizontalAlign="Center">
-                <HeaderStyle Width="80px" />
-                <ItemStyle HorizontalAlign="Center" />
-            </asp:BoundField>
-            <asp:BoundField DataField="Status" HeaderText="状态"
-                HeaderStyle-Width="50" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
-                <HeaderStyle Width="50px"></HeaderStyle>
 
                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
             </asp:BoundField>
+
+            <asp:BoundField DataField="CategoryName" HeaderText="产品分类" HeaderStyle-Width="80">
+                <HeaderStyle Width="80px"></HeaderStyle>
+
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+
+            <asp:BoundField DataField="Name" HeaderText="产品名称" HeaderStyle-Width="80">
+                <HeaderStyle Width="80px"></HeaderStyle>
+
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:BoundField>
+
+            <asp:TemplateField HeaderText="ThumbUrl">
+                <ItemTemplate>
+                    <asp:Image ID="imgThumb" Width="80" Height="80" runat="server" ImageUrl='<%# Eval("ThumbUrl") %>' />
+                </ItemTemplate>
+                <HeaderStyle Width="60px" />
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="状态" HeaderStyle-Width="60">
+                <ItemTemplate>
+                    <asp:Label ID="lblStatus" runat="server" Text='<%# Convert.ToInt64(Eval("Status")).GetDescription<ShowOrHide>() %>'></asp:Label>
+                </ItemTemplate>
+
+                <HeaderStyle Width="60px"></HeaderStyle>
+
+                <ItemStyle HorizontalAlign="Center" />
+            </asp:TemplateField>
+
             <asp:BoundField DataField="Click" HeaderText="点击数"
-                HeaderStyle-Width="50" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
-                <HeaderStyle Width="50px"></HeaderStyle>
-
-                <ItemStyle HorizontalAlign="Center"></ItemStyle>
-            </asp:BoundField>
-            <asp:BoundField DataField="Sort" HeaderText="排序"
-                HeaderStyle-Width="50" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
-                <HeaderStyle Width="50px"></HeaderStyle>
-
-                <ItemStyle HorizontalAlign="Center"></ItemStyle>
-            </asp:BoundField>
-            <asp:BoundField DataField="CreateUserId" HeaderText="创建作者"
-                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center">
                 <HeaderStyle Width="80px"></HeaderStyle>
 
                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
             </asp:BoundField>
+
+            <asp:BoundField DataField="SortIndex" HeaderText="排序"
+                HeaderStyle-Width="50" ItemStyle-HorizontalAlign="Center">
+                <HeaderStyle Width="50px"></HeaderStyle>
+
+                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+            </asp:BoundField>
+
+            <asp:BoundField DataField="CreateUserName" HeaderText="创建作者"
+                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center">
+                <HeaderStyle Width="80px"></HeaderStyle>
+
+                <ItemStyle HorizontalAlign="Center"></ItemStyle>
+            </asp:BoundField>
+
             <asp:BoundField DataField="CreateDate" HeaderText="创建时间"
-                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center">
                 <HeaderStyle Width="80px"></HeaderStyle>
 
                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
             </asp:BoundField>
-            <asp:BoundField DataField="UpdateUserId" HeaderText="更新作者"
-                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+
+            <asp:BoundField DataField="UpdateUserName" HeaderText="更新作者"
+                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center">
                 <HeaderStyle Width="80px"></HeaderStyle>
 
                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
             </asp:BoundField>
+
             <asp:BoundField DataField="UpdateDate" HeaderText="更新时间"
-                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center" HeaderStyle-HorizontalAlign="Center">
+                HeaderStyle-Width="80" ItemStyle-HorizontalAlign="Center">
                 <HeaderStyle Width="80px"></HeaderStyle>
 
                 <ItemStyle HorizontalAlign="Center"></ItemStyle>
             </asp:BoundField>
+
             <asp:TemplateField HeaderText="操作" HeaderStyle-Width="80" HeaderStyle-HorizontalAlign="Center">
                 <ItemTemplate>
                     <asp:HyperLink ID="hlUpdate" NavigateUrl='<%#"/Product/Edit.aspx?id=" + Eval("ProductId") %>' runat="server">修改</asp:HyperLink>

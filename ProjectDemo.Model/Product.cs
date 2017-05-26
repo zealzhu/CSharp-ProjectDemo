@@ -42,10 +42,14 @@ namespace ProjectDemo.Model
 			set{ _categoryid=value;}
 			get{return _categoryid;}
 		}
-		/// <summary>
-		/// 产品名称
-		/// </summary>
-		public string Name
+        /// <summary>
+        /// 分类名称
+        /// </summary>
+        public String CategoryName { get; set; }
+        /// <summary>
+        /// 产品名称
+        /// </summary>
+        public string Name
 		{
 			set{ _name=value;}
 			get{return _name;}
@@ -130,7 +134,11 @@ namespace ProjectDemo.Model
 			set{ _createuserid=value;}
 			get{return _createuserid;}
 		}
-		/// <summary>
+        /// <summary>
+        /// 创建用户名
+        /// </summary>
+        public String CreateUserName { get; set; }
+        /// <summary>
 		/// 创建日期
 		/// </summary>
 		public DateTime CreateDate
@@ -146,7 +154,11 @@ namespace ProjectDemo.Model
 			set{ _updateuserid=value;}
 			get{return _updateuserid;}
 		}
-		/// <summary>
+        /// <summary>
+        /// 创建用户名
+        /// </summary>
+        public String UpdateUserName { get; set; }
+        /// <summary>
 		/// 更新日期
 		/// </summary>
 		public DateTime UpdateDate

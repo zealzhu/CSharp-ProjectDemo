@@ -26,7 +26,7 @@ namespace ProjectDemo.OPPortal.Config
             if (!fuAboutImgUrl.HasFile)
             {
                 //没有上传文件
-                ScriptHelper.Alert("还未上传文件");
+                ScriptHelper.Alert("请先选择图片");
                 return;
             }
             //生成新的文件名,随机名+后缀

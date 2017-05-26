@@ -36,7 +36,6 @@ namespace ProjectDemo.OPPortal.News
                 BindCategoryDropDownList();
                 BindOldData(Convert.ToInt32(id));
             }
-
         }
 
         private void BindCategoryDropDownList()

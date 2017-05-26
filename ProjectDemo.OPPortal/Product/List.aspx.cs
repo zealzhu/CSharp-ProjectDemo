@@ -22,7 +22,22 @@ namespace ProjectDemo.OPPortal.Product
 
         private void BindData()
         {
-            gvProduct.DataSource = bll.GetModelList("");
+            String where = "Type=" + (int)CategoryType.ProductList;
+            CategoryBLL categoryBll = new CategoryBLL();
+            List<Category> categoryList = categoryBll.GetModelList(fields: "CategoryId, Name", where: where);
+            List<Product> productList = bll.GetModelList("");
+            List<UserInfo> userInfoList = new UserInfoBLL().GetModelList(fields: "UserId, Username");
+
+            foreach (Product item in productList)
+            {
+                //设置标题名字
+                item.CategoryName = categoryList.Find(o => o.CategoryId == item.CategoryId).Name;
+                //设置创建用户名
+                item.CreateUserName = userInfoList.Find(o => o.UserId == item.CreateUserId).Username;
+                //设置更新用户名
+                item.UpdateUserName = userInfoList.Find(o => o.UserId == item.UpdateUserId).Username;
+            }
+            gvProduct.DataSource = productList;
             gvProduct.DataBind();
         }
 
@@ -33,7 +48,7 @@ namespace ProjectDemo.OPPortal.Product
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("/Product/Edit.aspx");
         }
     }
 }

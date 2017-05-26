@@ -12,7 +12,7 @@
                 <asp:Image ID="imgAbout" runat="server" Width="220" Height="100"/>
                 <br />
                 <span>图片尺寸：220*100，大小不超过0.5MB，格式：jpg、gif、png、bmp</span>
-                <asp:Button ID="btnUpload" OnClick="btnUpload_Click" runat="server" Text="上传" OnClientClick="return checkImage(document.getElemnetById('fuAboutImgUrl', 0.5);"/>
+                <asp:Button ID="btnUpload" OnClick="btnUpload_Click" runat="server" Text="上传" OnClientClick="return checkImage(document.getElementById('fuAboutImgUrl'), 0.5);"/>
                 <asp:TextBox ID="txtAboutImgUrl" runat="server" ValidationGroup="vgUpload" CssClass="hidden"></asp:TextBox>           
             </td>
         </tr>
